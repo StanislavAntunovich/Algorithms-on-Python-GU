@@ -6,7 +6,7 @@ side1 = float(input('Введите длину первой стороны: '))
 side2 = float(input('Введите длину второй стороны: '))
 side3 = float(input('Введите длину третьей стороны: '))
 
-if side1 <= 0 or side2 <= 0 or side3 <= 0:
+if side1 <= 0 or side2 <= 0 or side3 <= 0 or side1 + side2 <= side3 or side2 + side3 <= side1 or side1 + side3 <= side2:
     print('Такой треугольник не существует.')
 elif side1 == side2 == side3:
     print('Треугольник равносторонний.')

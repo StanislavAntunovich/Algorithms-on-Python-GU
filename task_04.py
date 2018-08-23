@@ -29,5 +29,3 @@ else:
         f'Случайное целое число из диапазона от "{range_min}" до "{range_max}" -> '
         f'{random.randint(int(range_min), int(range_max))}'
     )
-
-

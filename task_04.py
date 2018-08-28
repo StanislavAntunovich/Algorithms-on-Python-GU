@@ -19,7 +19,7 @@ def items_summ_count(items_count, current_item=1):
     elif items_count == 0:
         return 0
     else:
-        return current_item + items_summ_count(items_count - 1, start_item / -2)
+        return current_item + items_summ_count(items_count - 1, current_item / -2)
     
     
 print(items_summ_count(5))

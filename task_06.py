@@ -8,19 +8,22 @@ import random
 random_num = random.randint(0, 100)
 try_count = 10
 
-for i in range(1, try_count):
-    user_num = int(input('Попробуй отгадать число от 0 до 100: '))
-    if user_num == random_num:
-        print(f'Правильно - верное число "{random_num}"')
+while try_count > 0:
+    user_choice = int(input(f'Попробуйте угадать число от 0 до 100 за {try_count} попыток'))
+    try_count -= 1
+    
+    if user_choice == random_num:
+        print('И это правильный ответ, поздравляю, Вы победили')
         break
-
-    elif user_num > random_num:
-        print(f'не верно, ваше число больше, осталось {10 - i} попыток')
+    
+    elif user_choice > random_num:
+        print('Нет, ваше число больше')
         continue
-
+        
     else:
-        print(f'не верно, ваше число меньше, осталось {10 - i} попыток')
-        continue
-
+        print('Нет, ваше чилос меньше')
+        
 else:
-    print(f'Попытки кончились - вы проиграли, правильное число было - {random_num}')
+    print(f'Попытки коничлись, Вы проиграли, число было: "{random_num}"')
+
+

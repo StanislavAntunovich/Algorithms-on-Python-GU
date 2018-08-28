@@ -13,13 +13,13 @@ print(f'Сумма элементов ряда равна {items_sum}')
 
 
 # Вариант 2
-def items_summ_count(items_count, start_item=1):
+def items_summ_count(items_count, current_item=1):
     if items_count == 1:
-        return start_item
+        return current_item
     elif items_count == 0:
         return 0
     else:
-        return items_count + items_summ_count(items_count - 1, start_item / -2)
+        return current_item + items_summ_count(items_count - 1, start_item / -2)
     
     
 print(items_summ_count(5))

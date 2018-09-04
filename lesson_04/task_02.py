@@ -42,7 +42,7 @@ def prime_nums_not_e(index):
     prime_num = 0
     prime_num_index = 0
 
-    while prime_nums_count < index + 1:
+    while prime_nums_count < index:
         for i in range(2, num):
             if num % i == 0:
                 break

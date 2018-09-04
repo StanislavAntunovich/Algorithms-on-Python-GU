@@ -16,6 +16,7 @@ def items_sum_loop(range_count):
 # 100 loops, best of 3: 1.5 usec per loop - 10 раз
 # 100 loops, best of 3: 2.73 usec per loop - 20 раз
 # 100 loops, best of 3: 5.2 usec per loop - 40 раз
+# линейная сложность
 
 # cProfile.run('items_sum_loop(10)')
 # # 1    0.000    0.000    0.000    0.000 task_01.py:7(items_sum_loop)
@@ -35,6 +36,7 @@ def items_sum_recursion(range_count, current_item=1.0):
 # 100 loops, best of 3: 2.5 usec per loop - 10
 # 100 loops, best of 3: 4.78 usec per loop - 20
 # 100 loops, best of 3: 9.39 usec per loop - 40
+# линейная сложность
 
 # cProfile.run('items_sum_recursion(10)')
 # # 10/1    0.000    0.000    0.000    0.000 task_01.py:26(items_sum_recursion)
@@ -58,6 +60,7 @@ def items_sum_m(range_count):
 # 100 loops, best of 3: 3.28 usec per loop - 10
 # 100 loops, best of 3: 6.04 usec per loop - 20
 # 100 loops, best of 3: 12.2 usec per loop - 40
+# линейная сложность
 
 # cProfile.run('items_sum_m(10)')
 # # 9/1    0.000    0.000    0.000    0.000 task_01.py:46(_items_sum)
@@ -78,6 +81,7 @@ def items_sum_c(range_count, current_item=1.0):
 # 100 loops, best of 3: 0.147 usec per loop - 10
 # 100 loops, best of 3: 0.147 usec per loop - 20
 # 100 loops, best of 3: 0.14 usec per loop - 40
+# линейная сложность
 
 # cProfile.run('items_sum_c(10)')
 # # 10/1    0.000    0.000    0.000    0.000 task_01.py:66(items_sum_c)

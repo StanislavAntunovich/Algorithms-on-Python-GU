@@ -33,6 +33,9 @@ def prime_num_e(index):
 # 100 loops, best of 3: 127 usec per loop - 20
 # 100 loops, best of 3: 565 usec per loop - 40
 
+# сложность O(4n)
+
+
 # Без решета
 def prime_nums_not_e(index):
     if index == 1:
@@ -61,3 +64,5 @@ def prime_nums_not_e(index):
 # 100 loops, best of 3: 27.8 usec per loop - 10
 # 100 loops, best of 3: 82.3 usec per loop - 20
 # 100 loops, best of 3: 293 usec per loop - 40
+
+# сложность O(4n)

@@ -38,21 +38,19 @@ def prime_num_e(index):
 
 # Без решета
 def prime_nums_not_e(index):
-    if index == 1:
-        return 2
-    num = 3
-    prime_nums = [2]
-    prime_nums_count = 0
+    num = 2
+    prime_num = 0
+    prime_num_index = 0
 
     while prime_nums_count < index + 1:
         for i in range(2, num):
             if num % i == 0:
                 break
         else:
-            prime_nums += [num]
-            prime_nums_count += 1
+            prime_num = num
+            prime_num_index += 1
         num += 1
-    return prime_nums[index - 1]
+    return prime_num
 
 # cProfile.run('prime_nums_not_e(50)')
 # # 1    0.001    0.001    0.001    0.001 task_02.py:33(prime_nums_not_e)
@@ -65,4 +63,4 @@ def prime_nums_not_e(index):
 # 100 loops, best of 3: 82.3 usec per loop - 20
 # 100 loops, best of 3: 293 usec per loop - 40
 
-# сложность O(4n)
+# сложность O(3n)

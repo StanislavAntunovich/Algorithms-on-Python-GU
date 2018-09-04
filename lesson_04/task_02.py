@@ -59,8 +59,8 @@ def prime_nums_not_e(index):
 # cProfile.run('prime_nums_not_e(200)')
 # # 1    0.009    0.009    0.009    0.009 task_02.py:33(prime_nums_not_e)
 
-# 100 loops, best of 3: 27.8 usec per loop - 10
-# 100 loops, best of 3: 82.3 usec per loop - 20
-# 100 loops, best of 3: 293 usec per loop - 40
+# 10 loops, best of 5: 32.6 usec per loop - 10
+# 10 loops, best of 5: 109 usec per loop - 20
+# 10 loops, best of 5: 412 usec per loop - 40
 
-# сложность O(3n)
+# сложность, честно говоря, затрудняюсь прямо сказать какая 

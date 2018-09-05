@@ -24,3 +24,6 @@ higher_profit = [f for f in firms if firms[f] > average_profit]
 
 print('Фирмы с прибылью выше среднего: ', end='')
 print(*higher_profit, sep=', ')
+
+print('Фирмы с прибылью ниже среднего: ', end='')
+print(*lower_profit, sep=', ')

@@ -2,9 +2,10 @@
 # Программа должна определить среднюю прибыль (за год для всех предприятий) и вывести наименования предприятий,
 # чья прибыль выше среднего и отдельно вывести наименования предприятий, чья прибыль ниже среднего.
 
+import collections
+
 firms_count = int(input('Введите количество предпиятий: '))
-firms_profit = {}
-total_profit = 0
+firms_profit = collections.Counter()
 
 for firm in range(firms_count):
     firm_name = input(f'Введите название для {firm + 1} предпиятия: ')
@@ -12,10 +13,9 @@ for firm in range(firms_count):
 
     for quoter in range(4):
         profit = float(input(f'Введите прибыль за {quoter + 1} квартал: '))
-        total_profit += profit
         firms_profit[firm_name] += profit
 
-average_profit = total_profit / firms_count
+average_profit = sum(firms_profit.values())/ firms_count
 
 lower_profit = [f for f in firms_profit if firms_profit[f] < average_profit]
 higher_profit = [f for f in firms_profit if firms_profit[f] > average_profit]

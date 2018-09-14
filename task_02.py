@@ -16,10 +16,10 @@ def merge_sort(array):
     middle = len(array) // 2
     first = merge_sort(array[:middle])
     second = merge_sort(array[middle:])
-    return merge(first, second)
+    return _merge(first, second)
 
 
-def merge(first, second):
+def _merge(first, second):
     sorted_list = []
     while first and second:
         if first[0] < second[0]:

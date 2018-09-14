@@ -6,8 +6,8 @@ def make_array(limit, round_=None):
         :param limit :type: list - длина массива
         :return массив """
     if not round:
-        return [random.uniform(0, 49) for _ in range(limit)]
-    return [round(random.uniform(0, 49), round_) for _ in range(limit)]
+        return [random.uniform(0, 50) for _ in range(limit)]
+    return [round(random.uniform(0, 50), round_) for _ in range(limit)]
 
 
 def merge_sort(array):

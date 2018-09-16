@@ -56,6 +56,6 @@ class HuffmanCodedString:
 
 
 if __name__ == '__main__':
-    a = HuffmanCodedString('абра кадабра')
+    a = HuffmanCodedString('абра кадабра швабра')
     print(a.code)
     print(a)

@@ -19,4 +19,4 @@ while str_len > 1:
     sub_len += 1
     str_len -= 1
 
-print(f'В строке "{string}" {len(sub_strings)} подстрок')
+print(f'В строке "{string}" {len(sub_strings)} уникальных подстрок')

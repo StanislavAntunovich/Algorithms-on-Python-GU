@@ -10,11 +10,8 @@ class MyNode:
         self.right = right
 
     def walk(self, code, value):
-        self.left.walk(code, value + '0')
-        self.right.walk(code, value + '1')
-
-    def __str__(self):
-        return f'left "{self.left}, right {self.right}"'
+        self.left.walk(code, value + ['0'])
+        self.right.walk(code, value + ['1'])
 
 
 class Leaf:
@@ -30,7 +27,7 @@ class HuffmanCodedString:
         self.string = string
         self.code = {}
         self.node = self._make_node()
-        self.node.walk(self.code, '')
+        self.node.walk(self.code, [''])
 
     def _make_leaves(self, string):
         new_counted = {}
@@ -51,7 +48,7 @@ class HuffmanCodedString:
     def __str__(self):
         coded_string = []
         for i in self.string:
-            coded_string += [self.code[i]] + [' ']
+            coded_string += self.code[i] + [' ']
         return ''.join(coded_string)
 
 

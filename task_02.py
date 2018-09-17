@@ -27,7 +27,7 @@ class HuffmanCodedString:
         self.string = string
         self.code = {}
         self.node = self._make_node()
-        self.node.walk(self.code, [''])
+        self.node.walk(self.code, [])
 
     def _make_leaves(self, string):
         new_counted = {}

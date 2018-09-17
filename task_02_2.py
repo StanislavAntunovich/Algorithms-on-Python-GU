@@ -12,11 +12,8 @@ class MyNode:
         self.right = right
 
     def walk(self, code, value):
-        self.left.walk(code, value + '0')
-        self.right.walk(code, value + '1')
-
-    def __str__(self):
-        return f'left "{self.left}, right {self.right}"'
+        self.left.walk(code, value + ['0'])
+        self.right.walk(code, value + ['1'])
 
 
 class Leaf:
@@ -44,7 +41,7 @@ def huff_encode(string_):
         items.sort(key=itemgetter(1), reverse=True)
     _node = items.pop()[0]
     code = {}
-    _node.walk(code, '')
+    _node.walk(code, [])
     print(code)
     for i in string_:
         print(code[i], end=' ')
